@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+    </head>   
+    <body>
+        <h1>전자도서관 로그인</h1>
+        <form action="login_copy.php" method="POST">
+            <p><input type="number" name="cno" maxlength="9" oninput="maxLengthCheck(this)" placeholder="회원번호" ></p>
+            <p><input type="password" name="password" id="" placeholder="비밀번호"></p>
+            <p><input type="submit" id="submit" value="로그인"/></p>         
+        </form>
+    </body>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+    function maxLengthCheck(object){
+        if (object.value.length > object.maxLength){
+            object.value = object.value.slice(0, object.maxLength);
+        }    
+    }
+    </script>
+</html>
